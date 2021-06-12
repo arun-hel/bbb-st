@@ -1,0 +1,21 @@
+{
+  "name": "bbbrecorder",
+  "version": "0.0.1",
+  "description": "Capture BBB recording & export as a video",
+  "scripts": {
+    "example": "node export.js \"https://BBB_HOST/playback/presentation/2.0/playback.html?meetingId=MEETING_ID\" meeting.webm 10 true"
+  },
+  "keywords": [
+    "record",
+    "chrome",
+    "puppeteer",
+    "screencast"
+  ],
+  "dependencies": {
+    "bigbluebutton-js": "^0.2.0",
+    "dotenv": "^8.6.0",
+    "puppeteer": "^2.1.1",
+    "xvfb": "^0.3.0",
+    "express": "^4.17.1"
+  }
+}

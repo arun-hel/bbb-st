@@ -1,0 +1,7 @@
+version: '3.2'
+services:
+    bbb-streaming:
+        container_name: streaming-api
+        image: stream-api
+        ports:
+            - "127.0.0.1:3005:3000"
