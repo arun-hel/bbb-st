@@ -38,4 +38,4 @@ RUN npm install
 # Command that will execute when container starts
 ENTRYPOINT ["sh","docker-entrypoint.sh"]
 
-CMD node /usr/src/app/bbb_stream.js
+CMD node /usr/src/app/server.js
