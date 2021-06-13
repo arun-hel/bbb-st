@@ -16,7 +16,14 @@ RUN apt-get -y install google-chrome-stable
 #Installing all other dependencies 
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:jonathonf/ffmpeg-4
-RUN apt-get -y update && apt-get -y install ffmpeg gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
+RUN apt-get -y update && apt-get -y install libgbm-dev ffmpeg gconf-service libasound2 libatk1.0-0 libc6 libcairo2 \
+                                        libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 \
+                                        libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 \
+                                        libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
+                                        libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 \
+                                        libxtst6 ca-certificates fonts-liberation libappindicator1  libnss3 \
+                                        lsb-release xdg-utils wget xvfb fonts-noto \
+                                        dbus-x11 libasound2 fluxbox  libasound2-plugins alsa-utils  alsa-oss pulseaudio pulseaudio-utils
                                         libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 \
                                         libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 \
                                         libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
@@ -30,12 +37,13 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
 RUN apt-get install --yes nodejs
 
 #COPY all files from bbb-streaming project
-COPY * .
+COPY .* ./
 
 #Install npm scripts
 RUN npm install 
 
 # Command that will execute when container starts
 ENTRYPOINT ["sh","docker-entrypoint.sh"]
+
 
 CMD node /usr/src/app/server.js
