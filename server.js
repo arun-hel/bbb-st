@@ -1,7 +1,7 @@
 var express = require("express");
 const child_process = require('child_process');
-var stream = require("./bbb-stream/bbb_stream")
-const test = require("./bbb-stream/bbb_api_test")
+var stream = require("./bbb_stream")
+const test = require("./bbb_api_test")
 var app = express();
 app.use(express.json({limit: '1mb'}));
 app.use(express.urlencoded({extended: true,limit: '1mb'})); 

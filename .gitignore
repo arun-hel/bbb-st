@@ -5,7 +5,9 @@ ffmpeg_cmd.sh
 /node_modules/
 nodetext.js
 /__pycache__
-/tmp
+/tmp/
+/api/
+/bbb-stream/
 # bbb_api_test.js
 
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control

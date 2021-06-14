@@ -4,7 +4,7 @@ const Xvfb = require('xvfb');
 const child_process = require('child_process');
 const bbb = require('bigbluebutton-js')
 // variables
-require('dotenv').config({path: '../.env'})
+require('dotenv').config()
 var BBB_URL = process.env.BBB_URL;
 var BBB_SECRET = process.env.BBB_SECRET;
 var MEETING_ID = MEETING_ID
