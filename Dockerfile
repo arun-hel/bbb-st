@@ -31,7 +31,6 @@ RUN apt-get install --yes nodejs
 
 #COPY all files from bbb-streaming project
 COPY * .
-COPY 
 
 #Install npm scripts
 RUN npm install 
