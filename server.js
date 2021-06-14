@@ -10,8 +10,8 @@ app.listen(3000, () => {
    });
 
 app.post("/api/streaming", (req, res) => {
-    res.send(JSON.stringify(req.body))
-    console.log(`${JSON.stringify(req.body)} \n`)
+    res.send(JSON.stringify({"status" : "succuss"}))
+    // console.log(`${JSON.stringify(req.body)} \n`)
     var MEETING_ID = req.body["MEETING_ID"]
     var MODORATOR_PW = req.body["MODORATOR_PW"]
     var HIDE_PRESENTATION = req.body["HIDE_PRESENTATION"]
