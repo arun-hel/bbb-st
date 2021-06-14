@@ -1,6 +1,6 @@
 function Start(MEETING_ID, MODORATOR_PW,HIDE_PRESENTATION,HIDE_CHAT,HIDE_USER_LIST,RTMP_URL,VIEWER_URL){
     const puppeteer = require('puppeteer');
-// const Xvfb      = require('xvfb');
+const Xvfb = require('xvfb');
 const child_process = require('child_process');
 const bbb = require('bigbluebutton-js')
 // variables
@@ -187,10 +187,8 @@ async function main() {
     } finally {
         page.close && await page.close()
         browser.close && await browser.close()
-
-        // if(platform == "linux"){
-        //     xvfb.stopSync()
-        // }
+        xvfb.stopSync()
+        
     }
 }
 main()
