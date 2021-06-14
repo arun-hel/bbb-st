@@ -30,7 +30,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
 RUN apt-get install --yes nodejs
 
 #COPY all files from bbb-streaming project
-COPY * .
+COPY . .
 
 #Install npm scripts
 RUN npm install 
