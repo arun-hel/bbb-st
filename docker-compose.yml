@@ -4,4 +4,4 @@ services:
         container_name: streaming-api
         image: stream-api
         ports:
-            - "127.0.0.1:3005:3000"
+            - "3005:3000"
